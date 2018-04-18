@@ -1,2 +1,63 @@
-<h1>Estaticas#nosotros</h1>
-<p>Find me in app/views/estaticas/nosotros.html.erb</p>
+<% provide(:titulo, "Nosotros") %>
+<h1>Acerca de</h1>
+<p>Código Embebido</p>
+<% 1+1 %>
+<%= 1+1 %>
+<br>
+<% # Un comentario %>
+<% 5.times do |x| %>
+  <%= x %>
+<% end %>
+
+<%
+# Soy un comentario Ruby
+# Y multi línea
+# Parezco como un comentario de un bloque
+# Solo hay que repetir el símbolo almohadilla
+%>
+
+<br>
+<%= @mensaje %>
+<br>
+<%= "El controlador dice #{@mensaje}" %>
+<br>
+
+<% (@usuarios.length).times do |x| %>
+  <%= @usuarios[x] %>
+  <br>
+<% end %>
+
+<ul>
+  <% @usuarios.each do |i| %>
+  <%= "<li>#{i}</li>".html_safe %>
+  <% end %>
+</ul>
+
+<ul>
+  <% @usuarios.each do |i| %>
+  <li><%= i %></li>
+  <% end %>
+</ul>
+
+<!-- NO USAR EN ERB   <a href="/home/index">Home</a>    -->
+<br>
+
+<%= link_to 'Home', root_path %>
+<%= link_to 'Contacto', estaticas_contacto_path %>
+
+<%= link_to 'Contacto',
+  {:controller=>'estaticas',
+   :action=>'contacto',
+   :id=>3,
+   :pagina=>2},
+   :class=>'my_class',
+   :target=>'_blank' %>
+
+<%= link_to 'Contacto',
+  :controller=>'estaticas',
+  :action=>'contacto',
+  :id=>3,
+  :pagina=>2 %>
+
+<p>Este último es mejor</p>
+<%= render 'shared/header' %>

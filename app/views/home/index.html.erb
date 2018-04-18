@@ -1,2 +1,9 @@
+<% provide(:titulo, "MiBlog") %>
 <h1>Hola</h1>
 <p>Bienvenido a mi Blog</p>
+
+<%= link_to 'Nosotros', estaticas_nosotros_path %>
+<%= link_to 'Contacto', estaticas_contacto_path %>
+<p>Este último es mejor
+</p>
+<%= render 'shared/header' %>

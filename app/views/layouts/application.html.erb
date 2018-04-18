@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MiBlog</title>
+    <title><%= yield(:titulo) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <p>Esta forma de poner los enlaces es la buena</p>
+    <%= render 'shared/header' %>
     <%= yield %>
   </body>
 </html>
