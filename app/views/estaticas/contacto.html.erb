@@ -25,3 +25,6 @@ LO CORRECTO ES CREAR VARIABLES DE INSTANCIA EN  estaticas_controller.rb
 <%= link_to 'Nosotros', estaticas_nosotros_path %>
 <p>Este último es mejor</p>
 <%= render 'shared/header' %>
+
+<%= content_for :saludo, "Hola" %>
+<%= yield :saludo %>
