@@ -1,5 +1,5 @@
 class EstaticasController < ApplicationController
-  
+
   def contacto
     @id = params[:id]
     @pagina = params[:pagina]
