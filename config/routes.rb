@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # get 'articulos/new'
-  # get 'articulos/index'
+  get 'articulos/new'
+  #get 'articulos/index'
+  #get 'articulos/edit'
+  #get 'articulos/show'
 
   resources :articulos
 

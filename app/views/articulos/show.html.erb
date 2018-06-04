@@ -1,4 +1,6 @@
 <% provide(:titulo, "Mostrar Articulo") %>
-<h1>Articulos#show</h1>
-<p>Find me in app/views/articulos/show.html.erb</p>
-<%= render 'shared/header' %>
+<h1><%= @articulo.titulo %></h1>
+<p>Creado el <%= @articulo.created_at.strftime("%d-%m-%Y") %></p>
+<p><%= @articulo.contenido %></p>
+<%= link_to "Editar", edit_articulo_path(@articulo) %>
+<%= link_to "Eliminar", @articulo, :method => :delete, data: {confirm: "¿Seguro que quieres eliminar el artículo?"} %>
