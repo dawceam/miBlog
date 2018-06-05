@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+
   get 'articulos/new'
   #get 'articulos/index'
   #get 'articulos/edit'
   #get 'articulos/show'
 
-  resources :articulos
+  resources :articulos do
+    resources :comentarios
+  end
 
   get 'estaticas/contacto'
   get 'estaticas/nosotros'

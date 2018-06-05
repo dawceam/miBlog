@@ -1,0 +1,4 @@
+<div>
+  <p>El	<%= comentario.created_at.strftime("%d-%m-%Y") %> <%= comentario.nombre %>
+    dice: <%= comentario.texto %> <%= link_to "Eliminar", [comentario.articulo, comentario], :method => :delete, data: {confirm: "¿Seguro que quieres eliminar el comentario?"} %></p>
+</div>
